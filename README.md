@@ -58,24 +58,24 @@ cd real-time-sentiment-analysis-api
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 
 ### **Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ### **Download NLP Model**
 
 The API uses a pre-trained model from Hugging Face. Ensure it's downloaded:
-
+```
 python
 from transformers import pipeline
 sentiment_model = pipeline('sentiment-analysis')
-
+```
 Note: The model will download automatically when you run the above code or start the API for the first time.
-
+```
 ## 🚴 Usage
 
 ## Running Locally
