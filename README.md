@@ -199,14 +199,14 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 ## 📞 Contact
 
 **Hassan Imam**
 
 - **Email:** [hassan._imam@outlook.com](mailto:hassan._imam@outlook.com)
-- **LinkedIn:** [Your LinkedIn]([(https://www.linkedin.com/in/hassan-imam-00/)] )
+- **LinkedIn:** [(https://www.linkedin.com/in/hassan-imam-00/)] 
 
 
 
