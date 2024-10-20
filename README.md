@@ -76,6 +76,8 @@ sentiment_model = pipeline('sentiment-analysis')
 ```
 Note: The model will download automatically when you run the above code or start the API for the first time.
 ```
+
+
 ## 🚴 Usage
 
 ## Running Locally
@@ -84,6 +86,6 @@ Note: The model will download automatically when you run the above code or start
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
-
+```
 
 
