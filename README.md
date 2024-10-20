@@ -163,7 +163,7 @@ Checks the health status of the API.
 - **GitHub Actions** for CI/CD
 
 ## 📁 Project Structure
-
+```
 real-time-sentiment-analysis-api/
 ├── app/
 │   ├── main.py          # API entry point
@@ -184,7 +184,7 @@ real-time-sentiment-analysis-api/
 │       └── ci-cd.yml    # GitHub Actions for CI/CD
 ├── README.md            # Project documentation
 └── LICENSE              # License file
-
+```
 
 ## 🤝 Contributing
 
