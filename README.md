@@ -88,4 +88,131 @@ Note: The model will download automatically when you run the above code or start
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
+### Test the API
+
+Send a POST request to the **/predict** endpoint:
+
+```
+curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d '{"text": "I love this product!"}'
+```
+
+
+### Docker Deployment
+
+## Build the Docker Image
+
+```
+docker build -t sentiment-analysis-api:latest .
+```
+
+### Run the Docker Container
+```
+docker run -p 8000:8000 sentiment-analysis-api:latest
+```
+
+### Kubernetes Deployment
+
+Apply the Kubernetes manifests:
+
+```
+kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/service.yaml
+```
+
+## 📡 API Endpoints
+
+POST **/predict**
+
+Analyzes sentiment of the provided text.
+
+-**Request Body:**
+
+```
+{
+  "text": "Your text here"
+}
+```
+
+-**Response:**
+```
+{
+  "label": "POSITIVE",
+  "score": 0.99
+}
+```
+
+GET **/health**
+Checks the health status of the API.
+```
+{
+  "status": "ok"
+}
+```
+
+
+
+## 🧰 Technologies Used
+
+- **Python 3.8+**
+- **FastAPI** for building the API
+- **Hugging Face Transformers** for NLP models
+- **Uvicorn** as the ASGI server
+- **Docker** for containerization
+- **Kubernetes** for orchestration
+- **Prometheus & Grafana** for monitoring
+- **GitHub Actions** for CI/CD
+
+## 📁 Project Structure
+
+real-time-sentiment-analysis-api/
+├── app/
+│   ├── main.py          # API entry point
+│   ├── models.py        # Model loading and prediction
+│   ├── schemas.py       # Pydantic models for request and response
+│   ├── utils.py         # Utility functions
+│   └── requirements.txt # Project dependencies
+├── tests/
+│   ├── test_api.py      # API endpoint tests
+│   └── test_models.py   # Model prediction tests
+├── Dockerfile           # Docker image instructions
+├── docker-compose.yml   # Docker Compose file (if needed)
+├── kubernetes/
+│   ├── deployment.yaml  # Kubernetes Deployment manifest
+│   └── service.yaml     # Kubernetes Service manifest
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml    # GitHub Actions for CI/CD
+├── README.md            # Project documentation
+└── LICENSE              # License file
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
+
+1. **Fork the repository**
+2. **Create a new branch:** `git checkout -b feature/YourFeature`
+3. **Commit your changes:** `git commit -m 'Add some feature'`
+4. **Push to the branch:** `git push origin feature/YourFeature`
+5. **Open a pull request**
+
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Hassan Imam**
+
+- **Email:** [hassan._imam@outlook.com](mailto:hassan._imam@outlook.com)
+- **LinkedIn:** [Your LinkedIn]([(https://www.linkedin.com/in/hassan-imam-00/)] )
+
+
+
+© 2024 Your Name. All rights reserved.
+
+
+
+
 
