@@ -51,7 +51,7 @@ The **Real-Time Sentiment Analysis API** is a scalable, production-ready API tha
 ```bash
 git clone https://github.com/your-username/real-time-sentiment-analysis-api.git
 cd real-time-sentiment-analysis-api
-
+```
 
 ### **Set Up Virtual Environment**
 
