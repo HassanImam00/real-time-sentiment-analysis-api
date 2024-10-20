@@ -75,7 +75,7 @@ from transformers import pipeline
 sentiment_model = pipeline('sentiment-analysis')
 ```
 Note: The model will download automatically when you run the above code or start the API for the first time.
-```
+
 
 
 ## 🚴 Usage
