@@ -166,24 +166,30 @@ Checks the health status of the API.
 ```
 real-time-sentiment-analysis-api/
 ├── app/
-│   ├── main.py          # API entry point
-│   ├── models.py        # Model loading and prediction
-│   ├── schemas.py       # Pydantic models for request and response
-│   ├── utils.py         # Utility functions
-│   └── requirements.txt # Project dependencies
+│   ├── __init__.py          # Makes 'app' a Python package
+│   ├── main.py              # API entry point
+│   ├── models.py            # Model loading and prediction
+│   ├── schemas.py           # Pydantic models for request and response
+│   ├── utils.py             # Utility functions
+│   └── requirements.txt     # Project dependencies
+├── data/
+│   ├── Reviews.csv          # Original dataset (added after download)
+│   ├── train_data.csv       # Preprocessed training data
+│   └── test_data.csv        # Preprocessed testing data
 ├── tests/
-│   ├── test_api.py      # API endpoint tests
-│   └── test_models.py   # Model prediction tests
-├── Dockerfile           # Docker image instructions
-├── docker-compose.yml   # Docker Compose file (if needed)
+│   ├── test_api.py          # API endpoint tests
+│   └── test_models.py       # Model prediction tests
+├── Dockerfile               # Docker image instructions
+├── docker-compose.yml       # Docker Compose file (if needed)
 ├── kubernetes/
-│   ├── deployment.yaml  # Kubernetes Deployment manifest
-│   └── service.yaml     # Kubernetes Service manifest
+│   ├── deployment.yaml      # Kubernetes Deployment manifest
+│   └── service.yaml         # Kubernetes Service manifest
 ├── .github/
 │   └── workflows/
-│       └── ci-cd.yml    # GitHub Actions for CI/CD
-├── README.md            # Project documentation
-└── LICENSE              # License file
+│       └── ci-cd.yml        # GitHub Actions for CI/CD
+├── README.md                # Project documentation
+├── LICENSE                  # License file
+└── data_preprocessing.py    # Script for data preprocessing
 ```
 
 ## 🤝 Contributing
