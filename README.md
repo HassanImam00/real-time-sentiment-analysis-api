@@ -66,6 +66,52 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+
+## 📦 Data Setup
+
+### **Download the Dataset**
+
+The dataset is available on Kaggle. Follow these steps to download and preprocess the data.
+
+1. **Kaggle API Setup**
+
+   - **Install the Kaggle package:**
+
+     ```bash
+     pip install kaggle
+     ```
+
+   - **Obtain Kaggle API Credentials:**
+
+     - Log in to [Kaggle](https://www.kaggle.com/).
+     - Go to your account settings and select **"Create New API Token"**.
+     - This will download a `kaggle.json` file containing your API credentials.
+
+   - **Place the `kaggle.json` File:**
+
+     - Windows: `C:\Users\<YourUsername>\.kaggle\kaggle.json`
+     - macOS/Linux: `/home/<YourUsername>/.kaggle/kaggle.json`
+
+2. **Download the Dataset Using the Kaggle API**
+
+   - Run the following command to download the dataset into the `data/` directory:
+
+     ```bash
+     kaggle datasets download -d snap/amazon-fine-food-reviews -p data/ --unzip
+     ```
+
+### **Preprocess the Data**
+
+Run the preprocessing script to clean and prepare the data:
+
+```bash
+python scripts/data_preprocessing.py
+```
+
+
+
+
+
 ### **Download NLP Model**
 
 The API uses a pre-trained model from Hugging Face. Ensure it's downloaded:
