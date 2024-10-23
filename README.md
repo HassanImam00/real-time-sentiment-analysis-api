@@ -69,47 +69,43 @@ pip install -r requirements.txt
 
 ## 📦 Data Setup
 
-### **Download the Dataset**
+### **Download and Prepare the Dataset**
 
-The dataset is available on Kaggle. Follow these steps to download and preprocess the data.
+1. **Download the Dataset from Kaggle**
 
-1. **Kaggle API Setup**
-
-   - **Install the Kaggle package:**
+   - Install the Kaggle package:
 
      ```bash
      pip install kaggle
      ```
 
-   - **Obtain Kaggle API Credentials:**
-
-     - Log in to [Kaggle](https://www.kaggle.com/).
-     - Go to your account settings and select **"Create New API Token"**.
-     - This will download a `kaggle.json` file containing your API credentials.
-
-   - **Place the `kaggle.json` File:**
+   - Obtain your Kaggle API credentials by logging into Kaggle, going to your account settings, and selecting **"Create New API Token"**. Place the `kaggle.json` file in the appropriate directory:
 
      - Windows: `C:\Users\<YourUsername>\.kaggle\kaggle.json`
      - macOS/Linux: `/home/<YourUsername>/.kaggle/kaggle.json`
 
-2. **Download the Dataset Using the Kaggle API**
-
-   - Run the following command to download the dataset into the `data/` directory:
+   - Download the dataset:
 
      ```bash
      kaggle datasets download -d snap/amazon-fine-food-reviews -p data/ --unzip
      ```
 
-### **Preprocess the Data**
+2. **Run the Data Preprocessing Script**
 
-Run the preprocessing script to clean and prepare the data:
+   - Ensure you have installed the required Python packages:
 
-```bash
-python scripts/data_preprocessing.py
-```
+     ```bash
+     pip install pandas numpy nltk scikit-learn
+     ```
 
+   - Run the script:
 
+     ```bash
+     python data_preprocessing.py
+     ```
 
+   - This will generate `train_data.csv` and `test_data.csv` in the `data/` directory.
+  
 
 
 ### **Download NLP Model**
